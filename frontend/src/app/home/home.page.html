@@ -12,7 +12,8 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-searchbar search-icon="search-circle" [(ngModel)]="searchPoke" showCancelButton="focus" animated placeholder="Busca tu pokemon"></ion-searchbar>
+  <ion-searchbar search-icon="search-circle" [(ngModel)]="searchPoke" showCancelButton="focus" animated
+    placeholder="Busca tu pokemon"></ion-searchbar>
   <div id="container-card">
     <ion-card class="poke-card" *ngFor="let p of pokemon | filter:searchPoke">
       <ion-card-header>

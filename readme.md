@@ -1,0 +1,1 @@
+Used ng2-search-filter
