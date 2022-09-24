@@ -10,6 +10,7 @@ import { PokemonService } from '../services/pokemon.service';
 export class HomePage {
 
   pokemon: Array<IPokemon> = [];
+  searchPoke: string;
 
   constructor(private pokemonService: PokemonService) {
     this.getAllPokemons();
