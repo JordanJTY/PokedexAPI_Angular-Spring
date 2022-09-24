@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IPokemon } from 'src/app/interfaces/ipokemon';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  pokemon: Array<IPokemon> = [];
 
+  constructor(private pokemonService: PokemonService) {
+    this.getAllPokemons();
+  }
+
+  getAllPokemons() {
+    this.pokemonService.getAllPokemons().subscribe(data => {
+      this.pokemon = data;
+    });
+  }
 }

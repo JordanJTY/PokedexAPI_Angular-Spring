@@ -20,28 +20,28 @@ public class PokemonController {
 	@Autowired
 	IPokemonService pokemonService;
 
-	@GetMapping("/pokemons")
+	@GetMapping("/pokemon")
 	public List<Pokemon> getAllPokemons() {
 		return pokemonService.getAll();
 	}
 
-	@GetMapping("/pokemons/{id}")
-	public Pokemon getOne(@PathVariable(value = "id") long id) {
+	@GetMapping("/pokemon/{id}")
+	public Pokemon getOne(@PathVariable(value = "id") Long id) {
 		return pokemonService.get(id);
 	}
 
-	@PostMapping("/pokemons")
+	@PostMapping("/pokemon")
 	public void post(Pokemon pokemon) {
 		pokemonService.post(pokemon);
 	}
 
-	@PutMapping("/pokemons/{id}")
-	public void put(Pokemon pokemon, @PathVariable(value = "id") long id) {
+	@PutMapping("/pokemon/{id}")
+	public void put(Pokemon pokemon, @PathVariable(value = "id") int id) {
 		pokemonService.put(pokemon, id);
 	}
 
-	@DeleteMapping("/pokemons/{id}")
-	public void delete(@PathVariable(value = "id") long id) {
+	@DeleteMapping("/pokemon/{id}")
+	public void delete(@PathVariable(value = "id") int id) {
 		pokemonService.delete(id);
 	}
 }
