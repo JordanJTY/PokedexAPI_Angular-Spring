@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PokeCardsComponent } from '../components/poke-cards/poke-cards.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HomePageRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, PokeCardsComponent]
 })
 export class HomePageModule {}

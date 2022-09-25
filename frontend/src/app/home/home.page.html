@@ -15,26 +15,30 @@
   <ion-searchbar search-icon="search-circle" [(ngModel)]="searchPoke" showCancelButton="focus" animated
     placeholder="Busca tu pokemon"></ion-searchbar>
   <div id="container-card">
-    <ion-card href="/" class="poke-card" *ngFor="let p of pokemon | filter:searchPoke">
-      <ion-card-header>
-        <h1>Nº {{p.numpokemon}}</h1>
-        <ion-title>{{p.name}}</ion-title>
-        <ion-item class="img-container">
-          <ion-img *ngIf="p.numpokemon < 10"
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/00{{p.numpokemon}}.png"></ion-img>
-          <ion-img *ngIf="9 < p.numpokemon && p.numpokemon < 100"
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/0{{p.numpokemon}}.png"></ion-img>
-          <ion-img *ngIf="99 < p.numpokemon && p.numpokemon < 810"
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{p.numpokemon}}.png"></ion-img>
-          <ion-img *ngIf="p.numpokemon > 809" src="assets/images/Missigno.png"></ion-img>
-        </ion-item>
-      </ion-card-header>
-      <ion-card-content>
-        <div class="poke-types">
-          <ion-img src="assets/images/{{p.type1}}.png"></ion-img>
-          <ion-img *ngIf="p.type2 != null" src="assets/images/{{p.type2}}.png"></ion-img>
-        </div>
-      </ion-card-content>
-    </ion-card>
+    <ion-item *ngFor="let p of pokemon | filter:searchPoke">
+      <app-poke-cards [numpokemon]="p.numpokemon" [name]="p.name" [type1]="p.type1" [type2]="p.type2"></app-poke-cards>
+    </ion-item>
+    <!-- <ion-card href="/" class="poke-card" *ngFor="let p of pokemon | filter:searchPoke">
+        <ion-card-header>
+          <h1>Nº {{p.numpokemon}}</h1>
+          <ion-title>{{p.name}}</ion-title>
+          <ion-item class="img-container">
+            <ion-img *ngIf="p.numpokemon < 10"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/00{{p.numpokemon}}.png"></ion-img>
+            <ion-img *ngIf="9 < p.numpokemon && p.numpokemon < 100"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/0{{p.numpokemon}}.png"></ion-img>
+            <ion-img *ngIf="99 < p.numpokemon && p.numpokemon < 810"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{p.numpokemon}}.png"></ion-img>
+            <ion-img *ngIf="p.numpokemon > 809" src="assets/images/Missigno.png"></ion-img>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="poke-types">
+            <ion-img src="assets/images/{{p.type1}}.png"></ion-img>
+            <ion-img *ngIf="p.type2 != null" src="assets/images/{{p.type2}}.png"></ion-img>
+          </div>
+        </ion-card-content>
+      </ion-card> -->
+
   </div>
 </ion-content>
