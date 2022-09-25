@@ -1,30 +1,26 @@
-.img-container {
-  position: relative;
-  width: 180px;
-  margin: 10px auto;
-}
+// .img-container {
+//   position: relative;
+//   width: 180px;
+//   margin: 10px auto;
+// }
 
-.container-card{
-  align-content: space-around;
+#container-card {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .poke-card {
-  position: relative;
-  font-family: 'Roboto Mono', monospace;
-  max-width: 20em;
-  border-radius: 1em;
-  color: #000;
-  text-align: center;
-  padding: 10px;
-  display: inline-grid;
   height: 40em;
-  //background-color: #FFF;
+  max-width: 20em;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 1em;
+  text-align: center;
   border: 1px solid black;
+  display: inline-flex;
+  // padding: 10px;
 }
 
 .poke-types {
-  //display: flex;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 4px;
+  padding: 1em;
+  margin: 1em;
 }
