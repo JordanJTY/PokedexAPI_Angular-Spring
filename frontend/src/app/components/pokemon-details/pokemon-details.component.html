@@ -1,4 +1,4 @@
-<ion-card href="/" class="poke-card">
+<ion-card class="poke-card">
   <ion-card-header>
     <h1>Nº {{numpokemon}}</h1>
     <ion-title>{{name}}</ion-title>
@@ -17,13 +17,13 @@
       <ion-img src="assets/images/{{type1}}.png"></ion-img>
       <ion-img *ngIf="type2 !== null" src="assets/images/{{type2}}.png"></ion-img>
     </div>
-    <div>
-      <h2>HP: {{hp}}</h2>
-      <h2>Attack: {{attack}}</h2>
-      <h2>Defense: {{defense}}</h2>
-      <h2>Sp. Attack: {{sp_attack}}</h2>
-      <h2>Sp. Defense: {{sp_defense}}</h2>
-      <h2>Speed: {{speed}}</h2>
+    <div class="stats-container">
+      <h1>HP: {{hp}}</h1>
+      <h1>Attack: {{attack}}</h1>
+      <h1>Defense: {{defense}}</h1>
+      <h1>Sp. Attack: {{sp_attack}}</h1>
+      <h1>Sp. Defense: {{sp_defense}}</h1>
+      <h1>Speed: {{speed}}</h1>
     </div>
   </ion-card-content>
 </ion-card>

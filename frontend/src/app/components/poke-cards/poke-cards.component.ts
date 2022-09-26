@@ -25,6 +25,7 @@ export class PokeCardsComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: ModalPage,
       componentProps: { id },
+      cssClass: 'my-custom-modal-css'
     });
 
     await modal.present();

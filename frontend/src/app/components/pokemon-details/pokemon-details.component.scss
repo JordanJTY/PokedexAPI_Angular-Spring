@@ -1,13 +1,18 @@
 .poke-card {
-    height: 50em;
+    height: 55em;
     max-width: 20em;
     font-family: 'Roboto Mono', monospace;
     border-radius: 1em;
     text-align: center;
     border: 1px solid black;
-  }
-  
-  .poke-types {
-    padding: 1.5em;
-    margin: 1.5em;
-  }
+}
+
+.stats-container{
+    padding: .5em;
+    margin: .5em;
+}
+
+.poke-types {
+    // padding: 1.5em;
+    // margin: 1.5em;
+}
