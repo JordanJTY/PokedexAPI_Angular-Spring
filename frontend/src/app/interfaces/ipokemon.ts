@@ -1,9 +1,9 @@
 export interface IPokemon {
     idpoke?: number;
     numpokemon: number;
-    name: String;
-    type1: String;
-    type2?: String;
+    name: string;
+    type1: string;
+    type2?: string;
     hp: number;
     attack: number;
     defense: number;

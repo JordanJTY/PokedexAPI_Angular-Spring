@@ -1,21 +1,21 @@
-<ion-card color="undefined" href="/" class="poke-card">
+<ion-card (click)="showModal(numpokemon)" class="poke-card">
   <ion-card-header>
     <h1>Nº {{numpokemon}}</h1>
     <ion-title>{{name}}</ion-title>
     <ion-item class="img-container">
-      <img *ngIf="+[(numpokemon)] < 10"
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/00{{numpokemon}}.png">
-      <img *ngIf="9 < +[(numpokemon)] && +[(numpokemon)] < 100"
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/0{{numpokemon}}.png">
-      <img *ngIf="99 < +[(numpokemon)] && +[(numpokemon)] < 810"
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{numpokemon}}.png">
-      <img *ngIf="+[(numpokemon)] > 809" src="assets/images/Missigno.png">
+      <ion-img *ngIf="+[(numpokemon)] < 10"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/00{{numpokemon}}.png"></ion-img>
+      <ion-img *ngIf="9 < +[(numpokemon)] && +[(numpokemon)] < 100"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/0{{numpokemon}}.png"></ion-img>
+      <ion-img *ngIf="99 < +[(numpokemon)] && +[(numpokemon)] < 810"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{numpokemon}}.png"></ion-img>
+      <ion-img *ngIf="+[(numpokemon)] > 809" src="assets/images/Missigno.png"></ion-img>
     </ion-item>
   </ion-card-header>
   <ion-card-content>
     <div class="poke-types">
-      <img src="assets/images/{{type1}}.png">
-      <img *ngIf="type2 !== null" src="assets/images/{{type2}}.png">
+      <ion-img src="assets/images/{{type1}}.png"></ion-img>
+      <ion-img *ngIf="type2 !== null" src="assets/images/{{type2}}.png"></ion-img>
     </div>
   </ion-card-content>
 </ion-card>

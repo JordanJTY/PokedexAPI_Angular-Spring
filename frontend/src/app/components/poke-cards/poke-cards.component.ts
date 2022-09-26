@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { ModalController } from '@ionic/angular';
+import { BehaviorSubject } from 'rxjs';
+import { ModalPage } from 'src/app/modal/modal.page';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-poke-cards',
@@ -13,8 +16,21 @@ export class PokeCardsComponent implements OnInit {
   @Input() type1: string;
   @Input() type2: string;
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {}
+
+  async showModal(id: number) {
+
+    const modal = await this.modalCtrl.create({
+      component: ModalPage,
+      componentProps: { id },
+    });
+
+    await modal.present();
+
+    const { data } = await modal.onDidDismiss();
+    console.log('Data returned', data )
+  }
 
 }

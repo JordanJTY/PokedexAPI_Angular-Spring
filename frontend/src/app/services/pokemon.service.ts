@@ -16,7 +16,7 @@ export class PokemonService {
   }
 
   getPokemon(id: number){
-    return this.http.get<Array<IPokemon>>(this.endpoint+"/"+id.toString);
+    return this.http.get<IPokemon>(this.endpoint+"/"+id);
   }
 
   deletePokemon(id: number){

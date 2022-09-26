@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Pokemon details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container-card">
+    <ion-item class="item-card" *ngIf="pokemon">
+      <app-pokemon-details [numpokemon]="pokemon.numpokemon" [name]="pokemon.name" [type1]="pokemon.type1" [type2]="pokemon.type2" [hp]="pokemon.hp"
+        [attack]="pokemon.attack" [defense]="pokemon.defense" [sp_attack]="pokemon.sp_attack" [sp_defense]="pokemon.sp_defense" [speed]="pokemon.speed"></app-pokemon-details>
+    </ion-item>
+  </div>
+</ion-content>
