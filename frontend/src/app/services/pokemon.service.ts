@@ -20,7 +20,7 @@ export class PokemonService {
   }
 
   deletePokemon(id: number){
-    this.http.delete(this.endpoint+"/"+id.toString);
+    this.http.delete(this.endpoint+"/"+id);
   }
 
   postPokemon(pokemon: IPokemon){
@@ -28,6 +28,6 @@ export class PokemonService {
   }
 
   putPokemon(pokemon: IPokemon, id: number){
-    this.http.put(this.endpoint+"/"+id.toString, pokemon);
+    this.http.put(this.endpoint+"/"+id, pokemon);
   }
 }

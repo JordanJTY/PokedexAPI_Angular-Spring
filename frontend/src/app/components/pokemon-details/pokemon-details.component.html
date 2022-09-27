@@ -18,12 +18,36 @@
       <ion-img *ngIf="type2 !== null" src="assets/images/{{type2}}.png"></ion-img>
     </div>
     <div class="stats-container">
-      <h1>HP: {{hp}}</h1>
+      <ion-item>
+        <ion-label position="stacked">HP:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{hp}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Attack:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{attack}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Defense:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{defense}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Sp. Attack:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{sp_attack}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Sp. Defense:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{sp_defense}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Speed:</ion-label>
+        <ion-input id="dataBox" type="number" value="{{speed}}" required="true" readonly="true"></ion-input>
+      </ion-item>
+      <!-- <h1>HP: {{hp}}</h1>
       <h1>Attack: {{attack}}</h1>
       <h1>Defense: {{defense}}</h1>
       <h1>Sp. Attack: {{sp_attack}}</h1>
       <h1>Sp. Defense: {{sp_defense}}</h1>
-      <h1>Speed: {{speed}}</h1>
+      <h1>Speed: {{speed}}</h1> -->
     </div>
   </ion-card-content>
 </ion-card>

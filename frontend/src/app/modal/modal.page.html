@@ -10,10 +10,24 @@
 </ion-header>
 
 <ion-content>
+
   <div id="container-card">
     <ion-item class="item-card" *ngIf="pokemon">
-      <app-pokemon-details [numpokemon]="pokemon.numpokemon" [name]="pokemon.name" [type1]="pokemon.type1" [type2]="pokemon.type2" [hp]="pokemon.hp"
-        [attack]="pokemon.attack" [defense]="pokemon.defense" [sp_attack]="pokemon.sp_attack" [sp_defense]="pokemon.sp_defense" [speed]="pokemon.speed"></app-pokemon-details>
+      <app-pokemon-details [numpokemon]="pokemon.numpokemon" [name]="pokemon.name" [type1]="pokemon.type1"
+        [type2]="pokemon.type2" [hp]="pokemon.hp" [attack]="pokemon.attack" [defense]="pokemon.defense"
+        [sp_attack]="pokemon.sp_attack" [sp_defense]="pokemon.sp_defense" [speed]="pokemon.speed"></app-pokemon-details>
+    </ion-item>
+  </div>
+  <div id="container-card">
+    <ion-item>
+      <ion-buttons slot="">
+        <ion-button (click)="update()">
+          Update
+        </ion-button>
+        <ion-button (click)="deletePokemon(id)">
+          Delete
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </div>
 </ion-content>
