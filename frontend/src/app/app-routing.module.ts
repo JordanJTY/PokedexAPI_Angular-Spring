@@ -12,8 +12,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'modal',
+    path: 'pokemon-details/:id',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'create-pokemon',
+    loadChildren: () => import('./create-pokemon/create-pokemon.module').then( m => m.CreatePokemonPageModule)
   },
 ];
 

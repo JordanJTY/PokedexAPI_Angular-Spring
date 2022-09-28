@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jordan.pokemons.entity.models.Pokemon;
@@ -31,17 +32,17 @@ public class PokemonController {
 	}
 
 	@PostMapping("/pokemon")
-	public void post(Pokemon pokemon) {
+	public void post(@RequestBody Pokemon pokemon) {
 		pokemonService.post(pokemon);
 	}
 
 	@PutMapping("/pokemon/{id}")
-	public void put(Pokemon pokemon, @PathVariable(value = "id") int id) {
+	public void put( @PathVariable(value = "id") Long id, @RequestBody Pokemon pokemon) {
 		pokemonService.put(pokemon, id);
 	}
 
 	@DeleteMapping("/pokemon/{id}")
-	public void delete(@PathVariable(value = "id") int id) {
+	public void delete(@PathVariable(value = "id") Long id) {
 		pokemonService.delete(id);
 	}
 }

@@ -1,4 +1,4 @@
-<ion-card (click)="showModal(numpokemon)" class="poke-card">
+<ion-card routerLink="/pokemon-details/{{idpoke}}" class="poke-card">
   <ion-card-header>
     <h1>Nº {{numpokemon}}</h1>
     <ion-title>{{name}}</ion-title>

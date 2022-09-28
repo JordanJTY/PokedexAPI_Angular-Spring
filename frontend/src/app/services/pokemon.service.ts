@@ -20,14 +20,14 @@ export class PokemonService {
   }
 
   deletePokemon(id: number){
-    this.http.delete(this.endpoint+"/"+id);
+    this.http.delete(this.endpoint+"/"+id).subscribe(data =>{});
   }
 
   postPokemon(pokemon: IPokemon){
-    this.http.post(this.endpoint, pokemon);
+    this.http.post(this.endpoint, pokemon).subscribe(data =>{});
   }
 
   putPokemon(pokemon: IPokemon, id: number){
-    this.http.put(this.endpoint+"/"+id, pokemon);
+    this.http.put(this.endpoint+"/"+id, pokemon ).subscribe(data =>{});
   }
 }

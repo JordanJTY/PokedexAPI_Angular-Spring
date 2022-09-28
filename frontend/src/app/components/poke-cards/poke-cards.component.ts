@@ -11,6 +11,7 @@ import { filter } from 'rxjs/operators';
 })
 export class PokeCardsComponent implements OnInit {
 
+  @Input() idpoke: number;
   @Input() numpokemon: number;
   @Input() name: string;
   @Input() type1: string;

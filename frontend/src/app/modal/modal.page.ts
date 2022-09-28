@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { IPokemon } from '../interfaces/ipokemon';
 import { PokemonService } from '../services/pokemon.service';
@@ -9,62 +10,54 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-
   @Input() id: number;
   pokemon: IPokemon;
   editable: boolean;
-  put: boolean;
 
-  constructor(private modalCrl: ModalController, private pokemonService: PokemonService) {
+  constructor(private modalCtrl: ModalController, private pokemonService: PokemonService, private activatedRoute: ActivatedRoute) {
     this.editable = true;
-    this.put = false;
   }
 
-  ngOnInit() {
-    console.log(`Pokemon ${this.id}`);
-    this.getPokemon(this.id);
+  ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.params.id;
+    this.getPokemon(id);
   }
+
   getPokemon(id: number) {
     this.pokemonService.getPokemon(id).subscribe(data => {
       this.pokemon = data;
+      console.log(this.pokemon.numpokemon)
     });
   }
 
   deletePokemon(id: number) {
     console.log('Id return: ' + id)
-    // this.pokemonService.deletePokemon(id);
+    this.pokemonService.deletePokemon(id);
   }
 
-  putPokemon(pokemon: IPokemon, id: number){
-    console.log('id'+ id + 'pokemon' + pokemon.hp)
-    // this.pokemonService.putPokemon(pokemon, id);
+  putPokemon(pokemon: IPokemon, id: number) {
+    console.log('id ' + id + ' - pokemon ' + pokemon.hp)
+    this.pokemonService.putPokemon(pokemon, id);
   }
 
   update() {
+    const id = this.activatedRoute.snapshot.params.id;
     if (this.editable === true) {
       //document.getElementById('dataBox').setAttribute("readonly", "false");
-      document.querySelectorAll('#dataBox').forEach(x => {
+      document.querySelectorAll('.dataBox').forEach(x => {
         x.setAttribute("readonly", "false");
       });
-
       this.editable = false;
-      this.put = true;
       console.log('editable: ' + this.editable);
     } else {
-      document.querySelectorAll('#dataBox').forEach(x => {
+      document.querySelectorAll('.dataBox').forEach(x => {
         x.setAttribute("readonly", "true");
       });
-      if(this.put === true){
-        this.putPokemon(this.pokemon, this.id);
-      }
+      console.log('HP ' + this.pokemon.hp);
+      this.putPokemon(this.pokemon, id);
       this.editable = true;
-      this.put = false;
       console.log('editable: ' + this.editable);
     }
-  }
-
-  close() {
-    this.modalCrl.dismiss({ myreturnvalue: this.id });
   }
 }
 
