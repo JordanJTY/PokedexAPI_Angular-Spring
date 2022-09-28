@@ -19,7 +19,6 @@ export class CreatePokemonPage implements OnInit {
   sp_attack: number = null;
   sp_defense: number = null;
   speed: number = null;
-  //pokemon: IPokemon;
 
   constructor(private pokemonService: PokemonService) { }
 
