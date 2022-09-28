@@ -23,6 +23,11 @@ export class ModalPage implements OnInit {
     this.getPokemon(id);
   }
 
+  ionViewDidEnter(){
+    const id = this.activatedRoute.snapshot.params.id;
+    this.getPokemon(id);
+  }
+
   getPokemon(id: number) {
     this.pokemonService.getPokemon(id).subscribe(data => {
       this.pokemon = data;

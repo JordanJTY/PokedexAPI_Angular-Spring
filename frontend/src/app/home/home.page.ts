@@ -16,6 +16,10 @@ export class HomePage {
     this.getAllPokemons();
   }
 
+  ionViewDidEnter(){
+    this.getAllPokemons();
+  }
+
   getAllPokemons() {
     this.pokemonService.getAllPokemons().subscribe(data => {
       this.pokemon = data;

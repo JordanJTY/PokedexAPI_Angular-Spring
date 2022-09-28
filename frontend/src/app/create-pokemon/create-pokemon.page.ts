@@ -27,7 +27,7 @@ export class CreatePokemonPage implements OnInit {
 
   postPokemon(pokemon: IPokemon) {
     console.log(pokemon.hp + ' ' + pokemon.type1 + ' ' + pokemon.name);
-    //this.pokemonService.postPokemon(pokemon);
+    this.pokemonService.postPokemon(pokemon);
   }
 
   createPokemon() {
