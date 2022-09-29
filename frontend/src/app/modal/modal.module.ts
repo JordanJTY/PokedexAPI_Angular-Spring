@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { ModalPageRoutingModule } from './modal-routing.module';
 
 import { ModalPage } from './modal.page';
-import { PokemonDetailsComponent } from '../components/pokemon-details/pokemon-details.component';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { PokemonDetailsComponent } from '../components/pokemon-details/pokemon-d
     IonicModule,
     ModalPageRoutingModule
   ],
-  declarations: [ModalPage, PokemonDetailsComponent]
+  declarations: [ModalPage]
 })
 export class ModalPageModule {}
