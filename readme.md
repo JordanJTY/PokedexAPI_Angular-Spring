@@ -128,6 +128,9 @@ Below you have commands to install all setup in Visual Studio Code.
 <!-- ENDPOINTS -->
 ## Endpoints 
 
+To check if the backend is OK, I used Postman to get, update, delete and add pokemons.
+* [![Ionix][Postman.io]][Postman-url]
+
 ### get pokemon
 
 ![Product Name Screen Shot][get-pokemon]
@@ -180,5 +183,7 @@ Below you have commands to install all setup in Visual Studio Code.
 [Angular-url]: https://angular.io/
 [Ionic.io]: https://img.shields.io/badge/IONIC-black?style=for-the-badge&logo=ionic&logoColor=blue
 [Ionic-url]: https://ionicframework.com
+[Postman.io]: https://img.shields.io/badge/POSTMAN-black?style=for-the-badge&logo=postman&logoColor=blue
+[Postman-url]: https://www.postman.com
 
 Used ng2-search-filter
