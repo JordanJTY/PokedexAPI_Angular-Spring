@@ -126,7 +126,7 @@ Below you have commands to install all setup in Visual Studio Code.
 
 
 <!-- ENDPOINTS -->
-## Endpoints with Postman
+## Endpoints 
 
 ### get pokemon
 
