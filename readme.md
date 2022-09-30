@@ -35,6 +35,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#components">Components</a></li>
+    <li><a href="#api">API</a></li>
     <li><a href="#endpoints">Endpoints</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
