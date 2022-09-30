@@ -136,17 +136,17 @@ To check if the backend is OK, I used  [![Ionix][Postman.io]][Postman-url]  to g
 
 ### Add pokemon
 
-![Product Name Screen Shot][add-pokemon-request] ![Product Name Screen Shot][add-pokemon-added]
+![Product Name Screen Shot][add-pokemon-request] | ![Product Name Screen Shot][add-pokemon-added]
 
 
 ### Post Pokemon
 
-![Product Name Screen Shot][update-pokemon-request] ![Product Name Screen Shot][update-pokemon-updated]
+![Product Name Screen Shot][update-pokemon-request] | ![Product Name Screen Shot][update-pokemon-updated]
 
 
 ### Delete pokemon
 
-![Product Name Screen Shot][delete-pokemon-request] ![Product Name Screen Shot][delete-pokemon-deleted]
+![Product Name Screen Shot][delete-pokemon-request] | ![Product Name Screen Shot][delete-pokemon-deleted]
 
 
 
