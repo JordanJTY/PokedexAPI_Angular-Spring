@@ -183,7 +183,7 @@ To check if the backend is OK, I used Postman to get, update, delete and add pok
 [Angular-url]: https://angular.io/
 [Ionic.io]: https://img.shields.io/badge/IONIC-black?style=for-the-badge&logo=ionic&logoColor=blue
 [Ionic-url]: https://ionicframework.com
-[Postman.io]: https://img.shields.io/badge/POSTMAN-black?style=for-the-badge&logo=postman&logoColor=blue
+[Postman.io]: https://img.shields.io/badge/POSTMAN-white?style=for-the-badge&logo=postman&logoColor=orange
 [Postman-url]: https://www.postman.com
 
 Used ng2-search-filter
