@@ -44,15 +44,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][main-menu]]
+[Product Name Screen Shot][main-menu]
 
 You will able to see your favourite pokemon in your web navigator! This application will show you the first seven generations of Pokemon. See below the different interfaces. 
 
-[![Product Name Screen Shot][create-pokemon]]
+[Product Name Screen Shot][create-pokemon]
 
-[![Product Name Screen Shot][pokemon-details]]
+[Product Name Screen Shot][pokemon-details]
 
-[![Product Name Screen Shot][search-pokemon]]
+[Product Name Screen Shot][search-pokemon]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
