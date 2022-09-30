@@ -23,11 +23,6 @@ export class ModalPage implements OnInit {
     this.getPokemon(id);
   }
 
-  // ionViewDidEnter(){
-  //   const id = this.activatedRoute.snapshot.params.id;
-  //   this.getPokemon(id);
-  // }
-
   getPokemon(id: number) {
     this.pokemonService.getPokemon(id).subscribe(data => {
       this.pokemon = data;
@@ -36,7 +31,7 @@ export class ModalPage implements OnInit {
   }
 
   deletePokemon(id: number) {
-    console.log('Id return: ' + id)
+    console.log('Id return: ' + id);
     this.pokemonService.deletePokemon(id);
   }
 
@@ -48,17 +43,14 @@ export class ModalPage implements OnInit {
   update() {
     const id = this.activatedRoute.snapshot.params.id;
     if (this.editable === true) {
-      //document.getElementById('dataBox').setAttribute("readonly", "false");
       document.querySelectorAll('.dataBox').forEach(x => {
         x.setAttribute("readonly", "false");
       });
       this.editable = false;
-      console.log('editable: ' + this.editable);
     } else {
       document.querySelectorAll('.dataBox').forEach(x => {
         x.setAttribute("readonly", "true");
       });
-      console.log('HP ' + this.pokemon.hp);
       this.putPokemon(this.pokemon, id);
       this.editable = true;
       console.log('editable: ' + this.editable);

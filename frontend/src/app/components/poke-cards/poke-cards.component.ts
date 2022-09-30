@@ -17,22 +17,8 @@ export class PokeCardsComponent implements OnInit {
   @Input() type1: string;
   @Input() type2: string;
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor() { }
 
   ngOnInit() {}
-
-  async showModal(id: number) {
-
-    const modal = await this.modalCtrl.create({
-      component: ModalPage,
-      componentProps: { id },
-      cssClass: 'my-custom-modal-css'
-    });
-
-    await modal.present();
-
-    const { data } = await modal.onDidDismiss();
-    console.log('Data returned', data )
-  }
 
 }

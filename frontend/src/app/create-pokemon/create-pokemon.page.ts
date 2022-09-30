@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPokemon } from '../interfaces/ipokemon';
 import { PokemonService } from '../services/pokemon.service';
 
@@ -20,7 +21,7 @@ export class CreatePokemonPage implements OnInit {
   sp_defense: number = null;
   speed: number = null;
 
-  constructor(private pokemonService: PokemonService) { }
+  constructor(private pokemonService: PokemonService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -28,6 +29,10 @@ export class CreatePokemonPage implements OnInit {
   postPokemon(pokemon: IPokemon) {
     console.log(pokemon.hp + ' ' + pokemon.type1 + ' ' + pokemon.name);
     this.pokemonService.postPokemon(pokemon);
+  }
+
+  navigate() {
+    this.router.navigate(['/home'])
   }
 
   createPokemon() {
@@ -43,7 +48,14 @@ export class CreatePokemonPage implements OnInit {
       sp_defense: this.sp_defense,
       speed: this.speed,
     }
-    this.postPokemon(pokemon);
+    if (pokemon.name == null || pokemon.numpokemon == null || pokemon.type1 == null || pokemon.hp == null || pokemon.attack == null || pokemon.defense == null
+      || pokemon.sp_attack == null || pokemon.sp_defense == null || pokemon.speed == null) {
+      alert('You must fill all fields');
+    } else {
+      this.postPokemon(pokemon);
+      this.navigate();
+    }
+
   }
 
 }

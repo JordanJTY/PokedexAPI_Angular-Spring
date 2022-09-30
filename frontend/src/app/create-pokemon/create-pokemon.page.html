@@ -16,7 +16,8 @@
         <ion-card-header>
           <ion-item>
             <ion-label position="stacked">Nº : (> 809)</ion-label>
-            <ion-input id="numpokemon" class="dataBox" type="number" [(ngModel)]="numpokemon" required="true"></ion-input>
+            <ion-input id="numpokemon" class="dataBox" type="number" [(ngModel)]="numpokemon" required="true">
+            </ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Name:</ion-label>
@@ -83,40 +84,60 @@
             <ion-img *ngIf="type2 !== null && type2 !== 'null'" src="assets/images/{{type2}}.png"></ion-img>
           </div>
           <div class="stats-container">
-            <ion-item>
-              <ion-label position="stacked">HP:</ion-label>
-              <ion-input id="hp" class="dataBox" type="number" [(ngModel)]="hp" required="true">
-              </ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Attack:</ion-label>
-              <ion-input id="attack" class="dataBox" type="number" [(ngModel)]="attack" required="true">
-              </ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Defense:</ion-label>
-              <ion-input id="defense" class="dataBox" type="number" [(ngModel)]="defense" required="true"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Sp. Attack:</ion-label>
-              <ion-input id="sp_attack" class="dataBox" type="number" [(ngModel)]="sp_attack" required="true">
-              </ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Sp. Defense:</ion-label>
-              <ion-input id="sp_defense" class="dataBox" type="number" [(ngModel)]="sp_defense" required="true">
-              </ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Speed:</ion-label>
-              <ion-input id="speed" class="dataBox" type="number" [(ngModel)]="speed" required="true"></ion-input>
-            </ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">HP:</ion-label>
+                    <ion-input id="hp" class="dataBox" type="number" name="hp" [(ngModel)]="hp" required="true">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">Attack:</ion-label>
+                    <ion-input id="attack" class="dataBox" type="number" name="attack" [(ngModel)]="attack"
+                      required="true"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">Defense:</ion-label>
+                    <ion-input id="defense" class="dataBox" type="number" name="defense" [(ngModel)]="defense"
+                      required="true"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">Sp. Attack:</ion-label>
+                    <ion-input id="sp_attack" class="dataBox" type="number" name="sp_attack" [(ngModel)]="sp_attack"
+                      required="true"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">Sp. Defense:</ion-label>
+                    <ion-input id="sp_defense" class="dataBox" type="number" name="sp_defense" [(ngModel)]="sp_defense"
+                      required="true"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="stacked">Speed:</ion-label>
+                    <ion-input id="speed" class="dataBox" type="number" name="speed" [(ngModel)]="speed"
+                      required="true"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </div>
-          <ion-buttons>
-            <ion-button routerLink="/home" (click)="createPokemon()">
-              Create
-            </ion-button>
-          </ion-buttons>
+          <ion-button color="medium" (click)="createPokemon()">
+            Create
+          </ion-button>
         </ion-card-content>
       </ion-card>
     </ion-item>

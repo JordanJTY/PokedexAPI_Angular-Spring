@@ -1,4 +1,4 @@
-package com.jordan.bicycles;
+package com.jordan.pokemons;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
