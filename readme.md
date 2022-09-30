@@ -31,7 +31,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#Endpoints">Endpoints</a></li>
+    <li><a href="#endpoints">Endpoints</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -92,8 +92,13 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 2. Install NPM packages
    ```sh
-   npm install -g @ionic/cli
+   npm install
    ```
+
+3. Install NPM packages of ionic
+    ```sh
+    npm install -g @ionic/cli
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,16 +124,16 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 
 
-<!-- Endpoints -->
+<!-- ENDPOINTS -->
 ## Endpoints with Postman
 
 # get pokemon
 
-[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/getPokemonRequest.png]
+https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/getPokemonRequest.png
 
 # Add pokemon
 
-[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonRequest.png]
+https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonRequest.png
 
 [https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonAdded.png]
 
