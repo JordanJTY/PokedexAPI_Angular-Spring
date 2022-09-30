@@ -34,6 +34,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#components">Components</a></li>
     <li><a href="#endpoints">Endpoints</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -124,11 +125,30 @@ Below you have commands to install all setup in Visual Studio Code.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- COMPONENTS -->
+## Components
+
+In this proyect, I used components with ionic. There could be like a mold to input data via variables or there could be pre-fabs like headers or footers using frecuently in website. In my case, I use it to insert data in that and show pokemon cards (Pokemon cards are visible in Main menú).
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- external API -->
+## API
+
+Our proyect was created to a API made by Github user (you have his profile below). To extract data from that API, I had to make a application where convert the JSON information in Java Objects. Then, I browse a array of Java Object called Pokemon to get data and insert in my database.
+
+You can find that small proyect in [![Github][GIthub.io]][Github-url].
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- ENDPOINTS -->
 ## Endpoints 
 
-To check if the backend is OK, I used  [![Ionix][Postman.io]][Postman-url]  to get, update, delete and add pokemons.
+To check if the backend is OK, I used  [![Postman][Postman.io]][Postman-url]  to get, update, delete and add pokemons.
 
 ### get pokemon
 
@@ -167,6 +187,7 @@ To check if the backend is OK, I used  [![Ionix][Postman.io]][Postman-url]  to g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[insert-pokemon]: https://github.com/JordanJTY/InsertPokemon_MySQL
 [get-pokemon]: https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/getPokemonRequest.png
 [add-pokemon-request]: https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonRequest.png
 [add-pokemon-added]: https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonAdded.png
@@ -184,3 +205,5 @@ To check if the backend is OK, I used  [![Ionix][Postman.io]][Postman-url]  to g
 [Ionic-url]: https://ionicframework.com
 [Postman.io]: https://img.shields.io/badge/POSTMAN-white?style=for-the-badge&logo=postman&logoColor=orange
 [Postman-url]: https://www.postman.com
+[Github.io]: https://img.shields.io/badge/GITHUB-white?style=for-the-badge&logo=giyhub&logoColor=black
+[GIthub-url]: https://github.com/JordanJTY/InsertPokemon_MySQL
