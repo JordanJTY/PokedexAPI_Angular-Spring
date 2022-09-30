@@ -128,8 +128,7 @@ Below you have commands to install all setup in Visual Studio Code.
 <!-- ENDPOINTS -->
 ## Endpoints 
 
-To check if the backend is OK, I used Postman to get, update, delete and add pokemons.
-* [![Ionix][Postman.io]][Postman-url]
+To check if the backend is OK, I used [![Ionix][Postman.io]][Postman-url] to get, update, delete and add pokemons.
 
 ### get pokemon
 
