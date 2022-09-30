@@ -178,7 +178,7 @@ To check if the backend is OK, I used  [![Postman][Postman.io]][Postman-url]  to
 ## Acknowledgments
 
 * [Github of original API creator](https://github.com/fanzeyi/pokemon.json)
-* [Pokemon images used from Pokemon Official Website](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Pokemon images used from Pokemon Official Website](https://www.pokemon.com/es/)
 * [GitHub Pages](https://github.com/JordanJTY)
 * [Icons of readme](https://shields.io)
 
