@@ -2,10 +2,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/icon/pokeicon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Best pokemon API</h3>
 
   <p align="center">
     An awesome proyect inspired in Pokemon!
@@ -31,10 +31,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Endpoints">Endpoints</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -44,15 +42,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][main-menu]]
+![Product Name Screen Shot][main-menu]
 
 You will able to see your favourite pokemon in your web navigator! This application will show you the first seven generations of Pokemon. See below the different interfaces. 
 
-[![Product Name Screen Shot][create-pokemon]]
+![Product Name Screen Shot][create-pokemon]
 
-[![Product Name Screen Shot][pokemon-details]]
+![Product Name Screen Shot][pokemon-details]
 
-[![Product Name Screen Shot][search-pokemon]]
+![Product Name Screen Shot][search-pokemon]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,7 +92,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   npm install -g @ionic/cli
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -124,8 +122,27 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- Endpoints -->
 ## Endpoints with Postman
 
+# get pokemon
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/getPokemonRequest.png]
+
 # Add pokemon
 
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonRequest.png]
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/addPokemonAdded.png]
+
+# Post Pokemon
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/udpatePokemonRequest.png]
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/udpatePokemonUpdated.png]
+
+# Delete pokemon
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/deletePokemonRequest.png]
+
+[https://github.com/JordanJTY/PokedexAPI_Angular-Spring/blob/master/frontend/src/assets/images/deletePokemonDeleted.png]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
