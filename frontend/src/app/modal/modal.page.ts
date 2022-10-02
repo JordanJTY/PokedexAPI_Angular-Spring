@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { IPokemon } from '../interfaces/ipokemon';
 import { PokemonService } from '../services/pokemon.service';
@@ -14,7 +14,7 @@ export class ModalPage implements OnInit {
   pokemon: IPokemon;
   editable: boolean;
 
-  constructor(private modalCtrl: ModalController, private pokemonService: PokemonService, private activatedRoute: ActivatedRoute) {
+  constructor(private modalCtrl: ModalController, private pokemonService: PokemonService, private activatedRoute: ActivatedRoute,  private router: Router) {
     this.editable = true;
   }
 
@@ -33,11 +33,16 @@ export class ModalPage implements OnInit {
   deletePokemon(id: number) {
     console.log('Id return: ' + id);
     this.pokemonService.deletePokemon(id);
+    this.navigate();
   }
 
   putPokemon(pokemon: IPokemon, id: number) {
     console.log('id ' + id + ' - pokemon ' + pokemon.hp)
     this.pokemonService.putPokemon(pokemon, id);
+  }
+
+  navigate() {
+    this.router.navigate(['/home'])
   }
 
   update() {
@@ -51,9 +56,17 @@ export class ModalPage implements OnInit {
       document.querySelectorAll('.dataBox').forEach(x => {
         x.setAttribute("readonly", "true");
       });
-      this.putPokemon(this.pokemon, id);
-      this.editable = true;
-      console.log('editable: ' + this.editable);
+      if (this.pokemon.hp == null || this.pokemon.attack == null || this.pokemon.defense == null
+        || this.pokemon.sp_attack == null || this.pokemon.sp_defense == null || this.pokemon.speed == null) {
+        alert('You must fill all fields');
+        document.querySelectorAll('.dataBox').forEach(x => {
+          x.setAttribute("readonly", "false");
+        });
+      } else {
+        this.putPokemon(this.pokemon, id);
+        this.editable = true;
+        this.navigate(); 
+      }
     }
   }
 }

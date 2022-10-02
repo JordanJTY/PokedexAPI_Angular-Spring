@@ -15,7 +15,7 @@
   <ion-card-content>
     <div class="poke-types">
       <ion-img src="assets/images/{{type1}}.png"></ion-img>
-      <ion-img *ngIf="type2 !== null" src="assets/images/{{type2}}.png"></ion-img>
+      <ion-img *ngIf="type2 !== null && type2 !== 'null'" src="assets/images/{{type2}}.png"></ion-img>
     </div>
   </ion-card-content>
 </ion-card>

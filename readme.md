@@ -151,6 +151,8 @@ You can find that small proyect in [![Github][GIthub.io]][Github-url].
 
 To check if the backend is OK, I used  [![Postman][Postman.io]][Postman-url]  to get, update, delete and add pokemons.
 
+You can check my endpoint in this link: (https://documenter.getpostman.com/view/23478612/2s83tGnBNt)
+
 ### get pokemon
 
 ![Product Name Screen Shot][get-pokemon]

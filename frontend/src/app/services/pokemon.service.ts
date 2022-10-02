@@ -1,6 +1,12 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ErrorHandler, Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IPokemon } from '../interfaces/ipokemon';
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+
+const httpOptionsUsingUrlEncoded = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -24,10 +30,32 @@ export class PokemonService {
   }
 
   postPokemon(pokemon: IPokemon) {
-    this.http.post(this.endpoint, pokemon).subscribe(data => { });
+    let data = new URLSearchParams();
+    data.append("numpokemon", pokemon.numpokemon.toString());
+    data.append("name", pokemon.name);
+    data.append("type1", pokemon.type1);
+    data.append("type2", pokemon.type2);
+    data.append("hp", pokemon.hp.toString());
+    data.append("attack", pokemon.attack.toString());
+    data.append("defense", pokemon.defense.toString());
+    data.append("sp_attack", pokemon.sp_attack.toString());
+    data.append("sp_defense", pokemon.sp_defense.toString());
+    data.append("speed", pokemon.speed.toString());
+    this.http.post<IPokemon>(this.endpoint, data, httpOptionsUsingUrlEncoded).subscribe(response => { }, (error) => { console.log(error) });
   }
 
   putPokemon(pokemon: IPokemon, id: number) {
-    this.http.put(this.endpoint + "/" + id, pokemon).subscribe(data => { });
+    let data = new URLSearchParams();
+    data.append("numpokemon", pokemon.numpokemon.toString());
+    data.append("name", pokemon.name);
+    data.append("type1", pokemon.type1);
+    data.append("type2", pokemon.type2);
+    data.append("hp", pokemon.hp.toString());
+    data.append("attack", pokemon.attack.toString());
+    data.append("defense", pokemon.defense.toString());
+    data.append("sp_attack", pokemon.sp_attack.toString());
+    data.append("sp_defense", pokemon.sp_defense.toString());
+    data.append("speed", pokemon.speed.toString());
+    this.http.put(this.endpoint + "/" + id, data, httpOptionsUsingUrlEncoded).subscribe(response => { }, (error) => { console.log(error) });
   }
 }

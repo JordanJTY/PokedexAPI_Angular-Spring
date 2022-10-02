@@ -32,12 +32,12 @@ public class PokemonController {
 	}
 
 	@PostMapping("/pokemon")
-	public void post(@RequestBody Pokemon pokemon) {
+	public void post(Pokemon pokemon) {
 		pokemonService.post(pokemon);
 	}
 
 	@PutMapping("/pokemon/{id}")
-	public void put( @PathVariable(value = "id") Long id, @RequestBody Pokemon pokemon) {
+	public void put( @PathVariable(value = "id") Long id, Pokemon pokemon) {
 		pokemonService.put(pokemon, id);
 	}
 
